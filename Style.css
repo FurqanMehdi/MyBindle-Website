@@ -1,0 +1,630 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f2f2;
+  overflow-x: hidden;
+  color: #222;
+  font-size: clamp(14px, 1.1vw, 18px);
+}
+
+/* Hero Section */
+.hero {
+  width: 100vw;
+  height: 100vh;
+}
+
+.background {
+  width: 100%;
+  height: 105vh;
+  background-color: #FF5349;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4vh;
+}
+
+/* Logo + Brand */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-bottom: 5vh;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+.brand {
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: white;
+}
+
+/* Content Area */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 90vw;
+  width: 100%;
+  padding: 0 2vw;
+}
+#typed-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #fff; /* blinking cursor */
+  width: 0;
+  animation: typing 4s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Cursor blinking */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.left {
+  flex: 1;
+  max-width: 40vw;
+  margin-top: -15vh;
+  color: white;
+}
+
+.left h2 {
+  font-size: 4vw;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.left p {
+  font-size: 1.1vw;
+  line-height: 1.6;
+  color: #fbecec;
+  margin-bottom: 3vh;
+}
+
+.cta {
+  padding: 1vh 2vw;
+  background-color: white;
+  color: #FF5349;
+  font-size: 1vw;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.6vw;
+  cursor: pointer;
+}
+
+/* Phone Image */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-container {
+  margin-top: 5vh;
+}
+
+.phone {
+  height: 90vh;
+  width: auto;
+  border-radius: 2vw;
+}
+
+/* Features Section */
+.features {
+  padding: 6vh 4vw;
+  text-align: center;
+  margin-top: 130px;
+}
+
+.features-title {
+  font-size: 2.5vw;
+  margin-bottom: 1vh;
+  font-weight: bold;
+}
+
+.features-subtitle {
+  font-size: 1.2vw;
+  color: #000;
+  margin-bottom: 5vh;
+  font-weight: bolder;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 2vw;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: #f2f2f2;
+  padding: 2vh 2vw;
+  border-radius: 1vw;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  text-align: center;
+}
+
+.feature-card h3 {
+  font-size: 1.2vw;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 1vw;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Connection Section */
+.connection-section {
+  background-color: #f2f2f2;
+  padding: 10vh 5vw;
+}
+
+.connection-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 95vw;
+  margin: auto;
+}
+
+.connection-left,
+.connection-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.connection-left img {
+  width: 100%;
+  max-width: 450px;
+}
+
+.connection-right h2 {
+  font-size: 2.5vw;
+  margin-bottom: 2vh;
+}
+
+.highlight-text {
+  font-size: 1.1vw;
+  margin-bottom: 2vh;
+  color: #333;
+}
+
+.connection-features .card-box {
+  background: #f2f2f2;
+  padding: 1vw;
+  border-radius: 0.6vw;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5vh;
+  font-size: 1vw;
+}
+
+.connection-features li{
+  list-style: none;
+}
+
+/* Install Section */
+.install {
+  max-width: 900px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.install h1 {
+  font-size: 2.2vw;
+  margin-bottom: 10px;
+}
+
+.install .subtitle {
+  font-size: 1vw;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.step-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.number {
+  font-size: 20px;
+  font-weight: bold;
+  background: #f2f2f2;
+  padding: 5px 12px;
+}
+
+.red {
+  color: red;
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background: #000;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.step {
+  background: #f2f2f2;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Donation Banner */
+.donation-banner {
+  background: #FF5349;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 40px;
+  border-radius: 20px;
+  max-width: 930px;
+  margin: 40px auto;
+  position: relative;
+  height: 425px;
+}
+
+.banner-text h1 {
+  font-size: 36px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.banner-text p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.banner-text button {
+  background: #f2f2f2;
+  color: #FF5349;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.banner-images {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+  display: flex;
+  gap: 30px;
+}
+
+.banner-images img {
+  width: 160px;
+  align-self: flex-end;
+}
+
+.banner-images .image-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.image3 {
+  width: 160px;
+  align-self: flex-end;
+}
+
+
+.taller-image {
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  padding: 60px 20px;
+ 
+}
+
+.testimonial-section h2{
+  text-align: center;
+}
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.testimonial-card {
+  background: #f2f2f2;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.stars {
+  color: #ffbf00;
+  margin-bottom: 10px;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.see-more {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.see-more button {
+  background-color: #f2f2f2;
+  color: #FF5349;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+
+
+
+
+.download-section {
+  background: #FF5349;
+  padding: 60px 40px;
+  color: #fff;
+  position: relative;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.mockup-images {
+  position: absolute;
+  bottom: 0px;
+  right: 40px;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 0;
+}
+
+.mockup-images .phone {
+  border-radius: 0;        /* Remove corner rounding */
+  align-self: flex-end;    /* Align all phones to the bottom */
+}
+
+.download-content {
+  flex: 1;
+}
+
+.download-content h2 {
+  font-size: 2.5vw;
+  margin-bottom: 10px;
+}
+
+.download-content span {
+  font-weight: bold;
+}
+
+.store-buttons img {
+  margin-top: 20px;
+  width: 150px;
+}
+
+.phone.short-phone {
+  height: 180px;
+}
+
+.phone.tall-phone {
+  height: 240px;
+}
+
+/* Hero section: Stack on small screens */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left, .right {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .left h2 {
+    font-size: 6vw;
+  }
+
+  .left p {
+    font-size: 3.5vw;
+  }
+
+  .cta {
+    font-size: 3vw;
+    padding: 10px 20px;
+  }
+
+  .phone {
+    height: 60vh;
+    width: auto;
+    margin-top: 20px;
+  }
+}
+
+/* Features grid: Stack on mobile */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card h3 {
+    font-size: 4vw;
+  }
+
+  .feature-card p {
+    font-size: 3vw;
+  }
+}
+
+/* Connection section responsiveness */
+@media (max-width: 768px) {
+  .connection-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .connection-right h2 {
+    font-size: 6vw;
+  }
+
+  .highlight-text {
+    font-size: 3.5vw;
+  }
+
+  .connection-features .card-box {
+    font-size: 3vw;
+  }
+}
+
+/* Install section adjustments */
+@media (max-width: 768px) {
+  .install h1 {
+    font-size: 6vw;
+  }
+
+  .install .subtitle {
+    font-size: 3vw;
+  }
+
+  .step {
+    min-width: 100%;
+  }
+}
+
+/* Donation banner images */
+@media (max-width: 768px) {
+  .donation-banner {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .banner-text h1 {
+    font-size: 6vw;
+  }
+
+  .banner-text p {
+    font-size: 3.5vw;
+  }
+
+  .banner-images {
+    position: static;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .banner-images img,
+  .image3,
+  .taller-image {
+    width: 40vw;
+    height: auto;
+  }
+}
+
+/* Testimonial section responsiveness */
+@media (max-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 6vw;
+  }
+}
+
+/* Download section */
+@media (max-width: 768px) {
+  .download-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .download-content h2 {
+    font-size: 6vw;
+  }
+
+  .store-buttons img {
+    width: 120px;
+  }
+
+  .mockup-images {
+    position: static;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .mockup-images .phone {
+    height: auto;
+    width: 40vw;
+  }
+}
